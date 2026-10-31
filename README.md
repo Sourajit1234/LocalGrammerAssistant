@@ -97,25 +97,21 @@ pillow==12.0.0
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/<your-username>/local-ai-assistant.git
-cd local-ai-assistant
+git clone https://github.com/Sourajit1234/LocalGrammerAssistant.git
+cd LocalGrammerAssistant
 ```
 
 ### 2. Create a virtual environment
 
-```powershell
+```powershell``
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
 
 ### 3. Install dependencies
 
-```powershell
-pip install -r requirements.txt
-```
-
 <details>
-<summary><strong>No requirements.txt yet? Paste this.</strong></summary>
+<summary><strong>Paste this.</strong></summary>
 
 ```powershell
 pip install customtkinter==5.2.2 llama_cpp_python==0.3.16 keyboard==0.13.5 pyperclip==1.11.0 pyautogui==0.9.54 pywinstyles==1.8 pillow==12.0.0
@@ -217,7 +213,6 @@ Tool/
 ├── backup.py         # Earlier single-file prototype (reference only, not used at runtime)
 ├── config.json       # Model + inference settings
 ├── model.gguf        # Local quantised model (git-ignored, download separately)
-└── requirements.txt  # Python dependencies
 ```
 
 `AI_Assistant.py` → `Backend.py` is the only real dependency edge: the UI layer never imports `llama_cpp` itself.
